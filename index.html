@@ -1,29 +1,74 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Happy Easter</title>
-		<style>
-			body { background-color: #90c0de; overflow: hidden;}
-			@keyframes move-chicken {
-				0% { margin-left: -10% }
-				100% { margin-left: 100%; }
-			}
-			.chicken-container {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				animation-name: move-chicken;
-				animation-duration: 20s;
-				animation-iteration-count: infinite;
-				animation-timing-function: linear;
 
+<head>
+	<title>SVG Chicken, responsive and animated</title>
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+	<style>
+		body {
+			background-color: #90c0de;
+			overflow: hidden;
+		}
+
+		@keyframes move-chicken {
+			0% {
+				margin-left: -10%
 			}
-		</style>
-	</head>
-	<body>
-		<div class="chicken-container">
-			<img class="position-absolute" src="assets/chicken.svg" width="10%" />
-		</div>
-	</body>
+			100% {
+				margin-left: 100%;
+			}
+		}
+
+		.chicken-container {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			animation-name: move-chicken;
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		.ribbon {
+			background-color: #000;
+			overflow: hidden;
+			white-space: nowrap;
+			position: fixed;
+			right: -50px;
+			top: 40px;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+			-webkit-box-shadow: 0 0 10px #888;
+			-moz-box-shadow: 0 0 10px #888;
+			box-shadow: 0 0 10px #888;
+		}
+
+		.ribbon a {
+			border: 1px solid #fff;
+			color: #fff;
+			display: block;
+			font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			margin: 1px 0;
+			padding: 10px 50px;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: 0 0 5px #444;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="ribbon">
+		<a href="https://github.com/mborgbrant/responsive-svg-chicken">Fork me on GitHub</a>
+	</div>
+	<div class="chicken-container">
+		<img src="assets/chicken.svg" width="10%" />
+	</div>
+</body>
+
 </html>
