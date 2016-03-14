@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Happy Easter</title>
+		<style>
+			body { background-color: #90c0de; }
+			@keyframes move-chicken {
+				0% { margin-left: -10% }
+				100% { margin-left: 100%; }
+			}
+			.chicken-container {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				animation-name: move-chicken;
+				animation-duration: 20s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="chicken-container">
+			<img class="position-absolute" src="assets/chicken.svg" width="10%" />
+		</div>
+	</body>
+</html>
